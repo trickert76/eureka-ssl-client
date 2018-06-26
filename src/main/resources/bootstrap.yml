@@ -4,6 +4,14 @@ spring:
         description: My Example Service
     jmx:
         default-domain: eureka-client
+    cloud:
+        config:
+            discovery:
+                enabled: true
+                serviceId: EUREKA-DISCOVERY-SERVICE
+            failFast: true
+            name: company
+            profile: settings
 
 http:
     client:
@@ -20,7 +28,7 @@ logging:
 eureka:
     client:
         serviceUrl:
-            defaultZone: https://localhost:8443/eureka-ds/eureka
+            defaultZone: https://localhost:8443/eureka
     instance:
         metadataMap:
             configPath: /config

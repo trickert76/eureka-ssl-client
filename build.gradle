@@ -43,13 +43,18 @@ dependencies {
   compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
   providedCompile('org.springframework.boot:spring-boot-starter-tomcat')
   //providedCompile('org.springframework.boot:spring-boot-starter-undertow')
+
+  // configuration
+  compile('org.springframework.cloud:spring-cloud-starter-config')
+
+
 }
 
 bootRun {
-   jvmArgs = [ 
-     "-Djavax.net.ssl.trustStore=classpath:keystore.p12", 
-     "-Djavax.net.ssl.trustStorePassword=changeit", 
-     "-Djavax.net.ssl.trustStoreType=PKCS12", 
-   ]
+//   jvmArgs = [ 
+//     "-Djavax.net.ssl.trustStore=/path-to/keystore/keystore.p12", 
+//     "-Djavax.net.ssl.trustStorePassword=changeit", 
+//     "-Djavax.net.ssl.trustStoreType=PKCS12", 
+//   ]
 }
 
